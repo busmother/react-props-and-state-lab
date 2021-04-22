@@ -42,6 +42,7 @@ class App extends React.Component {
 
   onAdoptPet = () => {
     this.setState({
+      //pets, find the pet that's adopted, and then update the state
       isAdopted: true
     })
   }
@@ -59,7 +60,7 @@ class App extends React.Component {
               {/* ^the lefthand side of the = defines the name of the prop on the lower level */}
             </div>
             <div className="twelve wide column">
-              <PetBrowser onAdoptPet={this.onAdoptPet}/>
+              <PetBrowser onAdoptPet={this.onAdoptPet} pets={this.state.pets}/>
             </div>
           </div>
         </div>
